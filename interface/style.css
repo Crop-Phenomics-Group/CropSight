@@ -1,0 +1,592 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3f3f3f;
+    font-size: 1.25em;
+}
+
+td {
+    vertical-align: top;
+}
+
+h1{
+margin: 5px;
+}
+
+
+#loginform {
+    margin: 0px auto;
+}
+
+.homelink {
+    border 0px;
+}
+.statuscell {
+    text-align: center;
+
+}
+.error {
+    color: red;
+}
+
+.passworderror{
+	background-color: lightcoral;
+	color: darkred;
+	border: 1px solid darkred;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+
+
+#graphbox
+{
+	margin: 10px;
+	border: 1px solid grey;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.thumbnail {
+height: 150px;
+width: 200px;
+}
+
+.imagecell {
+text-align: center;
+}
+
+.focus circle {
+  fill: steelblue;
+  stroke: steelblue;
+}
+
+.it{
+ font-style: italic;
+}
+
+.tick line{
+    opacity: 0.2;
+  }
+
+.focus rect {
+  fill: white;
+  stroke: steelblue;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.missingline {
+  fill: none;
+  stroke: grey;
+  stroke-width: 1.5px;
+}
+
+#header {
+
+  color: #60c332;
+    text-align: right;
+    padding: 5px;
+}
+
+#header h1{
+text-align: right;
+font-size: 4em;
+margin: 0px;
+}
+
+.shrink {
+    white-space:nowrap;
+}
+.expand {
+    width: 99%;
+}
+
+#headertable{
+
+    width: 100%;
+	border-collapse: collapse;
+}
+
+.pagetoolscell{
+    padding: 2px;
+}
+
+#pagetools{
+    float: right;
+    background-color: #ddeedd;
+    border: 1px solid #8CDC8C;
+    text-align: center;
+}
+
+#pagetoolslabel{
+    font-weight: bold;
+    color: #558855;
+    border-right: 1px solid #8CDC8C;
+    background-color: #eeffee;
+}
+
+.pagetoolsicon{
+    height: 40px;
+    width: 40px;
+}
+
+.pagetoolsbutton{
+    padding: 2px;
+
+display: inline-block;
+    height: 40px;
+    width: 40px;
+}
+
+#logocell{
+text-align: left;
+ white-space: nowrap;
+}
+
+#titlecell{
+width: 99%;
+}
+
+.nameblock{
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: center;
+    font-size: larger;
+    width: 150px;
+}
+
+.internaltable {
+    border: 0px solid black;
+    padding-top: 0px;
+    width: 100%;
+}
+.internaltablecell {
+    border: 0px solid black;
+    padding-top: 0px;
+}
+#content {
+    padding: 20px;
+}
+.online {
+    color: green;
+}
+#headerimage {
+    float: left;
+}
+.offline {
+    color: red;
+    font-weight: bold;
+}
+
+#footer {
+    clear: both;
+text-align: right;
+padding: 5px;
+color: #0A730A;
+border-top: 1px solid #8CDC8C;
+border-bottom: 1px solid #8CDC8C;
+
+}
+
+.statusicon {
+    width: 70px;
+    min-height: 70px;
+}
+.diskspacebar {
+    width: 350px;
+    height: 20px;
+    padding: 0px;
+    background-color: #b8e356;
+    border: 1px solid #83c41a;
+    float: right;
+}
+.usedspace {
+    height: 18px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #fc8d83;
+    border: 1px solid #d83526;
+}
+.floatingtext {
+    float: right;
+    margin: 0px;
+}
+.statusoffline {
+    background-color: #fc8d83;
+    border: 1px solid #d83526;
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    width: 150px;
+    height: 140px;
+    text-align: center;
+    color: black;
+
+}
+
+.statuscomplete {
+    background-color: #c7dbfc;
+    border: 1px solid #a3b3ce;
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    width: 150px;
+    height: 140px;
+    text-align: center;
+    color: black;
+
+}
+
+
+
+
+.statusok {
+    background-color: #b8e356;
+    border: 1px solid #83c41a;
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    width: 150px;
+    height: 140px;
+    text-align: center;
+    color: black;
+}
+
+.statusboxtext{
+    position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+
+.statuswarning {
+    background-color: #ffc477;
+    border: 1px solid #eeb44f;
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    width: 150px;
+    height: 140px;
+    text-align: center;
+    color: black;
+}
+
+.hostname_box{
+
+     position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.statusofflinegrid {
+    background-color: #fc8d83;
+    border: 1px solid #d83526;
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    width: 190px;
+    text-align: center;
+    color: black;
+}
+.statusokgrid {
+    background-color: #b8e356;
+    border: 1px solid #83c41a;
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    width: 190px;
+    text-align: center;
+    color: black;
+}
+.statuswarninggrid {
+    background-color: #ffc477;
+    border: 1px solid #eeb44f;
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    width: 190px;
+    text-align: center;
+    color: black;
+}
+
+.statuscompletegrid {
+    background-color: #c7dbfc;
+    border: 1px solid #a3b3ce;
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    width: 190px;
+    text-align: center;
+    color: black;
+
+}
+
+
+.thumbnailgrid{
+width: 200px;
+height: 150px;
+    border: 1px solid #dcdcdc;
+
+}
+
+
+.borderedcell{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.linkButton {
+    background-color: #ededed;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #000000;
+    padding: 0px;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+}
+.linkButton:hover {
+    background-color: #dfdfdf;
+}
+.linkButton:active {
+    position: relative;
+    top: 1px;
+}
+
+
+.navButton {
+	background-color:#ffffff;
+	border:0px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #000000;
+    padding: 6px 27px;
+    text-decoration: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25em;
+}
+.navButton:hover {
+	background-color:#f6f6f6;
+}
+.navButton:active {
+    position: relative;
+    top: 1px;
+}
+
+.navButtonGrey {
+	background-color:#ededed;
+	border:1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #000000;
+    padding: 5px 26px;
+    text-decoration: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25em;
+}
+.navButtonGrey:hover {
+	background-color:#dfdfdf;
+}
+.navButtonGrey:active {
+    position: relative;
+    top: 1px;
+}
+
+#navbar{
+background-color: #dfdfdf;
+padding: 0px 10px;
+}
+
+#graphnavbar{
+background-color: #dfdfdf;
+padding: 0px 10px;
+}
+
+.okhr{
+color: green;
+}
+
+.warninghr{
+color: darkorange;
+}
+
+.right-text{
+text-align: right;
+}
+
+#viewselect{
+text-align: right;
+}
+
+.gridcell{
+    text-align: center;
+	background-color:#f9f9f9;
+	border:1px solid #dcdcdc;
+	padding: 5px;
+	float: left;
+	margin: 3px;
+    width: 240px;
+    height: 300px;
+}
+
+.gridcell h3{
+text-align: center;
+}
+
+.mapplot{
+			fill: url(#hatch00);
+			stroke: black;
+			stroke-width: 0.01;
+		}
+		.mapfield{
+			fill: #f9f9f9;
+			stroke: #dcdcdc;
+			stroke-width: 0.025;
+		}
+		.mapstatusok{
+			fill: url(#fillok);
+			stroke: black;
+			stroke-width: 0.025;
+		}
+		.mapstatuswarning{
+			fill: url(#fillwarn);
+			stroke: black;
+			stroke-width: 0.025;
+		}
+		.mapstatusoffline{
+			fill: url(#filloff);
+			stroke: black;
+			stroke-width: 0.025;
+		}
+		.mapstatuscomplete{
+			fill: url(#fillcom);
+			stroke: black;
+			stroke-width: 0.025;
+		}
+
+
+
+
+
+
+
+#expList ul, li {
+    list-style: none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+}
+#expList p {
+    margin:0;
+    display:block;
+}
+#expList p:hover {
+    background-color:#121212;
+}
+#expList li {
+    line-height:140%;
+    text-indent:0px;
+    background-position: 1px 8px;
+    padding-left: 20px;
+    background-repeat: no-repeat;
+}
+
+/* Collapsed state for list element */
+#expList .collapsed {
+    background-image: url(images/collapsed.png);
+}
+/* Expanded state for list element
+/* NOTE: This class must be located UNDER the collapsed one */
+#expList .expanded {
+    background-image: url(images/expanded.png);
+}
+
+#listContainer{
+	background-color: #f9f9f9;
+	border: 0px solid black;
+	border-top: 1px solid rgb(17,17,17);
+	border-bottom: 1px solid rgb(17,17,17);
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background-color:#ededed;
+	border:1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #000000;
+    padding: 5px 26px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25em;
+
+}
+
+.dropbtn:hover {
+	background-color:#f6f6f6;
+}
+.dropbtn:active {
+    position: relative;
+    top: 1px;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+.projectcontainer{
+    box-shadow: 5px 5px 5px grey;
+    border: 1px solid #8CDC8C;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.monitored_plot_outline{
+border: 1px solid red;
+}
