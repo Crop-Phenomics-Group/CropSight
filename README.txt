@@ -15,9 +15,7 @@ Database Initialization
     run on the cropmonitor database using either an SQL admin tool such as phpmyadmin or
     the SQL command: source /pathtosource/sql/database.sql. This will initialize all
 	database tables.
-4.	Due to security restrictions for sensitive data, CropMonitor accounts cannot be
-    created through the interface. To add a user account, manually add the users name and
-    email address to the table cropmonitor.users. Leaving the password blank will prompt
+4.	The default username to access the system is 'admin'. Leaving the password blank will prompt
 	the user to set a password on first login.
 
 PHP Initialization

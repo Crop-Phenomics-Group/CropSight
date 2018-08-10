@@ -150,7 +150,4 @@ if (isset($_GET['projectedit'])) {
 } //isset($_GET['projectedit'])
 
 
-if (isset($_GET['nodeedit'])) {
-
-} //isset($_GET['nodeedit'])
 ?>

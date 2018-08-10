@@ -87,13 +87,6 @@ if (isset($_GET['projectdelete'])) {
 } //isset($_GET['projectdelete'])
 
 
-if (isset($_POST['nodeedit'])) {
-
-} //isset($_POST['nodeedit'])
-
-
-
-
 
 
 
@@ -198,40 +191,6 @@ while ($project = $projectlist->fetch_assoc()) {
 
 
 
-
-<hr />
-
-<h2>Nodes</h2>
-
-<table id="nodetable" class="display compact" cellspacing="0" width="100%">
-<thead>
-<tr><th>Hostname</th><th>MAC Address</th><th>Project</th><th></th></tr>
-</thead><tbody>
-
-<?php
-$nodelist = $sql->query("SELECT * FROM " . $sqldatabase . ".pistatus;");
-
-while ($node = $nodelist->fetch_assoc()) {
-?>
-
-<tr><td><?php
-    echo $node['hostname'];
-?></td><td><?php
-    echo $node['macaddress'];
-?></td><td></td><td class="right-text"><a style="width:95px;" href="index.php?page=adminedit&nodeedit=<?php
-    echo $node['macaddress'];
-?>"  class="linkButton">Edit</a> <a style="width:95px;" href="index.php?page=admin&nodedelete=<?php
-    echo $node['macaddress'];
-?>"  class="linkButton">Delete</a></td></tr>
-
-<?php
-} //$node = $nodelist->fetch_assoc()
-
-?>
-
-</tbody>
-</table>
-
 <script> $(document).ready(function() {
     $('#usertable').DataTable( {
         "ordering": false,
@@ -243,10 +202,5 @@ while ($node = $nodelist->fetch_assoc()) {
         "ordering": false,
     } );
 
-
-
-        $('#nodetable').DataTable( {
-        "ordering": false,
-    } );
 } );
 </script>
