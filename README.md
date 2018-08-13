@@ -33,7 +33,7 @@ i.e. MySQL.
 1.	Edit the file in the supplied source code /interface/database.php and /api/database.php
     to add the password created in Database Initialization Step 1 to the empty field $sql_password.
 2.	Edit the file in the supplied source code /api/developer_key.php to add a unique developer
-    key and value to the empty fields $$developer_key and $developer_key_value. These form part
+    key and value to the empty fields $developer_key and $developer_key_value. These form part
 	of the api URL to verify devices.
 3.	Copy all files in the php folder (not including the folder itself) to the base php
     folder of the webserver. For example, on a standard Linux Apache server this folder
