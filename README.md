@@ -1,4 +1,4 @@
-# CropMonitor
+# CropSight
 
 Daniel Reynolds<sup>1</sup>, Joshua Ball<sup>1</sup> and Ji Zhou<sup>1,2,*</sup>
 
@@ -8,8 +8,8 @@ Daniel Reynolds<sup>1</sup>, Joshua Ball<sup>1</sup> and Ji Zhou<sup>1,2,*</sup>
 <sup>*</sup>Correspondence: ji.zhou@earlham.ac.uk
 
 
-CropMonitor is a server system which runs on a network enabled web server.
-To install CM, a functioning PHP and SQL server is required. Whilst CM is designed
+CropSight is a server system which runs on a network enabled web server.
+To install CS, a functioning PHP and SQL server is required. Whilst CS is designed
 to be easy to use and intuitive in design, allowing users with no technical background
 to utilize the tools, installation requires an IT professional. The only pre-requisites
 for installation are a PHP server supporting PHP5+ i.e. Apache and an SQL server
@@ -39,5 +39,5 @@ i.e. MySQL.
     folder of the webserver. For example, on a standard Linux Apache server this folder
 	would be /var/www/html.
 4.	Connect to the webserver using it’s IP or web address, successful installation will
-    show the CropMonitor login screen. This can be logged in using the user account created
+    show the CropSight login screen. This can be logged in using the user account created
 	in Database Initialization Step 4.
