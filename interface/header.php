@@ -34,7 +34,7 @@ OF SUCH DAMAGE.
 <html lang="en">
 <head>
     <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
-    <title>CropSurveyor Network Monitor</title>
+    <title>CropSight Network Monitor</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" type="text/css" href="print.css" media="print">
 <link rel="stylesheet" type="text/css" href="assets/fixedHeader.dataTables.min.css">
@@ -64,7 +64,7 @@ OF SUCH DAMAGE.
 
 <table align="right"><tr>
 <td style="text-align: right"><img src="images/logo.png" style="height: 100px; display:inline-block;"  /></td>
-<td><h1 style="display: inline;">CropSurveyor</h1></td>
+<td><h1 style="display: inline;">CropSight</h1></td>
 </tr>
 </table>
 

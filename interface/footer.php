@@ -35,7 +35,7 @@ OF SUCH DAMAGE.
 
 <div id="footer">
 
-    <table style="width: 100%"><tr><td style="text-align: left;">Crop Phenomics Group</td><td style="text-align: right;">CropQuant &copy; 2017</td></tr>
+    <table style="width: 100%"><tr><td style="text-align: left;">Crop Phenomics Group</td><td style="text-align: right;">CropSight &copy; 2017</td></tr>
     <tr><td style="text-align: left;">Dr. J. Zhou, Dr. D. Reynolds</td><td></td></tr></table>
 
 
