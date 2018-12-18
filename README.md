@@ -22,7 +22,7 @@ i.e. MySQL.
 2.	A database named ‘cropmonitor’ must be created on the SQL server and read/write
     access given to the cropmonitor user
 3.	In the supplied source code is the SQL file /database/database.sql, this file must be
-    run on the cropmonitor database using either an SQL admin tool such as phpmyadmin or
+    run on the cropsight database using either an SQL admin tool such as phpmyadmin or
     the SQL command: source /pathtosource/sql/database.sql. This will initialize all
 	database tables.
 4.	The default username to access the system is 'admin'. Leaving the password blank will prompt
