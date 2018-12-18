@@ -33,8 +33,8 @@ OF SUCH DAMAGE.
 <?php
 
 $sqlhost     = "localhost";
-$sqldatabase = "cropmonitor";
-$sqluser     = "cropmonitor";
+$sqldatabase = "cropsight";
+$sqluser     = "cropsight";
 
 // Enter SQL user password below
 $sqlpassword = "u5[!TJ6n8d;V4@KH";
