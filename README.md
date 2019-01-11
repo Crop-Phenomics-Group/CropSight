@@ -41,3 +41,26 @@ i.e. MySQL.
 4.	Connect to the webserver using it’s IP or web address, successful installation will
     show the CropSight login screen. This can be logged in using the user account created
 	in Database Initialization Step 4.
+
+## Downloads
+
+### CropSight Source Code
+
+- Database: [database.zip](https://github.com/Crop-Phenomics-Group/CropSight/blob/pub/packaged/database.zip)
+- API: [api.zip](https://github.com/Crop-Phenomics-Group/CropSight/blob/pub/packaged/api.zip)
+- Interface: [interface.zip](https://github.com/Crop-Phenomics-Group/CropSight/blob/pub/packaged/interface.zip)
+- PiCamera Image Capture Python Script: [camera_capture_script.py](https://github.com/Crop-Phenomics-Group/CropSight/blob/pub/packaged/camera_capture_script.py)
+
+### Trial Screenshots
+
+- [Grid View 2016](https://github.com/Crop-Phenomics-Group/CropSight/blob/pub/packaged/Screenshot-Grid.View.2016.png)
+- [List View 2016](https://github.com/Crop-Phenomics-Group/CropSight/blob/pub/packaged/Screenshot-List.View.2016.png)
+- [Grid View 2017](https://github.com/Crop-Phenomics-Group/CropSight/blob/pub/packaged/Screenshot-Grid.View.2017.png)
+- [List View 2017](https://github.com/Crop-Phenomics-Group/CropSight/blob/pub/packaged/Screenshot-List.View.2017.png)
+- [Grid View 2018](https://github.com/Crop-Phenomics-Group/CropSight/blob/pub/packaged/Screenshot-Grid.View.2018.png)
+- [List View 2018](https://github.com/Crop-Phenomics-Group/CropSight/blob/pub/packaged/Screenshot-List.View.2018.png)
+
+### Sensor Data
+
+- [Sensor Data CSV 2016-2018](https://github.com/Crop-Phenomics-Group/CropSight/blob/pub/packaged/Sensor.Data.CSV.zip)
+- [Supporting Sensor Datasets for Paper Figures](https://github.com/Crop-Phenomics-Group/CropSight/blob/pub/packaged/figure_supporting_data.zip)
