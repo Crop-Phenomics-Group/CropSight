@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------
 
-CropMonitor is released under the following license (BSD-3-Clause License):
+CropSight is released under the following license (BSD-3-Clause License):
 
 Copyright 2018 The Zhou Laboratory, Earlham Institute, Norwich, UK
 
