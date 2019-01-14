@@ -37,12 +37,3 @@ def capture(filename):
         camera.capture(filename)
 
         camera.stop_preview()
-
-timestamp = time.localtime(time.time())
-year = str(timestamp[0])
-month = str(timestamp[1])
-day = str(timestamp[2])
-hour = str(timestamp[3])
-minutes = str(timestamp[4])
-
-capture(year + '-' + month + '-' + day + '_' + hour + '-' + minutes + '.jpg')
