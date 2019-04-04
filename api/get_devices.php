@@ -30,7 +30,7 @@ if(isset($_GET['project']))
     $SQL_QUERY = "SELECT * FROM " . $GLOBALS['sqldatabase'] . ".pistatus WHERE projectid='" . $_GET['project'] . "'";
 }
 
-$device_list = $GLOBALS['sql']->query($SQL_QUERY) or die($GLOBALS['sql']->error);;
+$device_list = $GLOBALS['sql']->query($SQL_QUERY) or die($GLOBALS['sql']->error);
 while ($device = $device_list->fetch_assoc()) {
 
     $device_obj=new device($device['macaddress'], $device['ipaddress'], $device['hostname'], $device['uptime'], $device['lastupdate'], $device['projectid'], $device['lastimage'], $device['position']);
