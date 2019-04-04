@@ -29,5 +29,3 @@ $sql->query("SET NAMES utf8;");
 $GLOBALS['sql']         = $sql;
 $GLOBALS['sqldatabase'] = $sqldatabase;
 ?>
- Download Formatting took: 34 ms PHP Formatter made by Spark Labs
-Copyright Gerben van Veenendaal
