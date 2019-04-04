@@ -20,6 +20,8 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 
 <?php
 
+include("nodegridcell.php");
+
 function check_device_status($id)
 {
     $devicelist = $GLOBALS['sql']->query("SELECT * FROM " . $GLOBALS['sqldatabase'] . ".pistatus WHERE macaddress = '" . $id . "';");
@@ -120,18 +122,12 @@ function secondsToTime($seconds)
 $nodes;
 
 if ($_SESSION['view'] == 'list') {
-
-
-
-    include('monitornodes.php');
+    include('nodetable.php');
     if ($nodeselection != "none") {
         include('graphdata.php');
     } //$nodeselection != "none"
 } //$_SESSION['view'] == 'list'
 else {
-
-
-
     if ($nodeselection != "none") {
         $nodenames = $sql->query("SELECT hostname FROM " . $sqldatabase . ".pistatus WHERE macaddress = '" . $nodeselection . "' ORDER BY hostname ASC;");
         if ($name = $nodenames->fetch_assoc()) {
@@ -139,7 +135,7 @@ else {
         } //$name = $nodenames->fetch_assoc()
 
         $nodes = $sql->query("SELECT * FROM " . $sqldatabase . ".pistatus WHERE macaddress = '" . $nodeselection . "' ORDER BY hostname ASC;");
-        include('monitornodes.php');
+        include('nodetable.php');
         if ($nodeselection != "none") {
             include('graphdata.php');
         } //$nodeselection != "none"
@@ -155,8 +151,6 @@ else {
 
 
     /////////////////////////////////////
-
-
 
 
     $projects = $sql->query("SELECT projectid, description FROM " . $sqldatabase . ".projects WHERE projectgroup='" . $_SESSION['project_selection'] . "' AND active=1 ORDER BY projectid DESC;");
@@ -179,104 +173,8 @@ else {
         $columnindex = 0;
 
         while ($gridnode = $grid->fetch_assoc()) {
-            $columnindex = $columnindex + 1;
-            if ($columnindex > $gridwidth) {
 
-                $columnindex = 0;
-            } //$columnindex > $gridwidth
-
-
-            $status = check_device_status($gridnode['macaddress']);
-
-?>
-<div class="gridcell">
-
-<h3><?php
-            echo $gridnode['hostname'];
-?></h3>
-
-<div style="clear:both;"></div>
-
-<a href="index.php?node=<?php
-            echo $gridnode['macaddress'];
-?>" style="text-decoration: none;">
-<img src="fetchimage.php?macaddress=<?php
-            echo $gridnode['macaddress'];
-?>" alt="<?php
-            echo $gridnode['hostname'];
-?> Sample Image" class="thumbnailgrid" />
-</a>
-<br />
-
-
-
-<?php
-
-            $timeQuery      = $sql->query("SELECT timestamp FROM " . $sqldatabase . ".sensorreading WHERE macaddress='" . $gridnode['macaddress'] . "' ORDER BY timestamp ASC;");
-            $overallRuntime = 0;
-
-            if ($timerow = $timeQuery->fetch_assoc()) {
-                $overallRuntime = (int) (time() - strtotime($timerow['timestamp']));
-
-            } //$timerow = $timeQuery->fetch_assoc()
-
-?>
-
-
-
-<?php
-
-            if ($status == 'ok') {
-?>
-               <a class="statusokgrid" href="index.php?node=<?php
-                echo $gridnode['macaddress'];
-?>"><?php
-
-
-                echo overall_runtime($sql, $sqldatabase, $gridnode['macaddress']);
-
-
-?></a>
-            <?php
-            } //$status == 'ok'
-            elseif ($status == 'warning') {
-?>
-               <a class="statuswarninggrid" href="index.php?node=<?php
-                echo $gridnode['macaddress'];
-?>"><?php
-
-                echo overall_runtime($sql, $sqldatabase, $gridnode['macaddress']);
-?></a>
-            <?php
-            } //$status == 'warning'
-                elseif ($status == 'inactive') {
-?>
-               <a class="statuscompletegrid" href="index.php?node=<?php
-                echo $gridnode['macaddress'];
-?>">Exp. Completed<br/><?php
-                echo $gridnode['lastupdate'];
-?></a>
-
-            <?php
-            } //$status == 'inactive'
-            else {
-?>
-
-        <a class="statusofflinegrid" href="index.php?node=<?php
-                echo $gridnode['macaddress'];
-?>">OFFLINE<br/><?php
-                echo $gridnode['lastupdate'];
-?></a>
-
-<?php
-            }
-?>
-
-</div>
-
-
-
-<?php
+            $columnindex = node_grid_cell($gridnode, $gridwidth, $sql, $sqldatabase, $columnindex);
 
         } //$gridnode = $grid->fetch_assoc()
 

@@ -19,17 +19,15 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 
 
 <?php
-
 $sqlhost     = "localhost";
-$sqldatabase = "cropmonitor";
-$sqluser     = "cropmonitor";
-
+$sqldatabase = "cropsight";
+$sqluser     = "cropsight";
 // Enter SQL user password below
-$sqlpassword = "u5[!TJ6n8d;V4@KH";
-
-$sql = new mysqli($sqlhost, $sqluser, $sqlpassword, $sqldatabase);
+$sqlpassword = "einqyg";
+$sql         = new mysqli($sqlhost, $sqluser, $sqlpassword, $sqldatabase);
 $sql->query("SET NAMES utf8;");
-
-$GLOBALS['sql'] = $sql;
+$GLOBALS['sql']         = $sql;
 $GLOBALS['sqldatabase'] = $sqldatabase;
 ?>
+ Download Formatting took: 34 ms PHP Formatter made by Spark Labs
+Copyright Gerben van Veenendaal

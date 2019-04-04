@@ -52,7 +52,7 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 
 <table align="right"><tr>
 <td style="text-align: right"><img src="images/logo.png" style="height: 100px; display:inline-block;"  /></td>
-<td><h1 style="display: inline;">CropMonitor</h1></td>
+<td><h1 style="display: inline;">CropSight</h1></td>
 </tr>
 </table>
 

@@ -19,15 +19,33 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 
 
 <?php
-$sqlhost     = "localhost";
-$sqldatabase = "cropmonitor";
-$sqluser     = "cropmonitor";
-// Enter SQL user password below
-$sqlpassword = "";
-$sql         = new mysqli($sqlhost, $sqluser, $sqlpassword, $sqldatabase);
-$sql->query("SET NAMES utf8;");
-$GLOBALS['sql']         = $sql;
-$GLOBALS['sqldatabase'] = $sqldatabase;
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+if (isset($_GET[$developer_key])) {
+    if ($_GET[$developer_key] == $developer_key_value) {
+        include("database.php");
+        if (isset($_GET['long'])) {
+            $long = $sql->real_escape_string($_GET['long']);
+        } //isset($_GET['long'])
+        else {
+            die("Longitude not set");
+        }
+        if (isset($_GET['lat'])) {
+            $lat = $sql->real_escape_string($_GET['lat']);
+        } //isset($_GET['lat'])
+        else {
+            die("Latitude not set");
+        }
+        $sql_statement = "UPDATE cropmonitor.projects SET longitude='" . $long . "', latitude='" . $lat . "' WHERE local=1;";
+        $sql->query($sql_statement);
+        echo $sql_statement;
+    } //$_GET[$developer_key] == $developer_key_value
+    else {
+        die("Wrong Key Value");
+    }
+} //isset($_GET[$developer_key])
+else {
+    die("Wrong Key");
+}
 ?>
- Download Formatting took: 34 ms PHP Formatter made by Spark Labs
-Copyright Gerben van Veenendaal

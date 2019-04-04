@@ -28,6 +28,9 @@ if (isset($_GET['ping'])) {
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+
+include('developer_key.php');
+
 if (isset($_GET[$developer_key])) {
     if ($_GET[$developer_key] == $developer_key_value) {
 

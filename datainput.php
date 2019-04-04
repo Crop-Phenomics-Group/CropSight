@@ -25,6 +25,9 @@ if (isset($_GET['ping'])) {
         exit();
     } //$_GET['ping'] == 'test'
 } //isset($_GET['ping'])
+
+include("developer_key.php");
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -36,6 +39,7 @@ if (isset($_GET[$developer_key])) {
         $ipaddress         = $_SERVER['REMOTE_ADDR'];
         $internalipaddress = '';
         $hostname          = '';
+        $projectid         = '';
         $uptime            = '';
         $duration          = 0;
         $latestimage       = '';
@@ -53,6 +57,9 @@ if (isset($_GET[$developer_key])) {
         if (isset($data['hostname'])) {
             $hostname = $sql->real_escape_string($data['hostname']);
         } //isset($data['hostname'])
+        if (isset($data['projectid'])) {
+            $projectid = $sql->real_escape_string($data['projectid']);
+        } //isset($data['projectid'])
         if (isset($data['duration'])) {
             $duration = $sql->real_escape_string($data['duration']);
         } //isset($data['duration'])
@@ -69,7 +76,15 @@ if (isset($_GET[$developer_key])) {
         $count    = $existing->fetch_assoc();
         if ($count['total'] == 0) {
             echo 'CQ not found';
-            $sql->query("INSERT INTO " . $sqldatabase . ".pistatus (macaddress, ipaddress, internalipaddress, hostname, uptime, duration, lastimage, position) VALUES " . "('" . $macaddress . "','" . $ipaddress . "','" . $internalipaddress . "','" . $hostname . "','" . $uptime . "'," . $duration . ",'"  . $latestimage . "', " . $position . "');");
+
+           // echo "INSERT INTO " . $sqldatabase . ".pistatus (macaddress, ipaddress, internalipaddress, hostname, uptime, duration, lastimage, position) VALUES " . "('" . $macaddress . "','" . $ipaddress . "','" . $internalipaddress . "','" . $hostname . "','" . $uptime . "'," . $duration . ",'"  . $latestimage . "', '" . $position . "', '" . $projectid . "');");
+
+
+            $sql->query("INSERT INTO " . $sqldatabase . ".pistatus (macaddress, ipaddress, internalipaddress, hostname, uptime, duration, lastimage, position, projectid) VALUES " . "('" . $macaddress . "','" . $ipaddress . "','" . $internalipaddress . "','" . $hostname . "','" . $uptime . "'," . $duration . ",'"  . $latestimage . "', '" . $position . "', '" . $projectid . "');");
+
+
+
+
             $errorstring = $sql->error;
             echo $errorstring;
             $sql->query("DELETE * FROM " . $sqldatabase . ".pistorage WHERE macaddress='" . $macaddress . "';");
@@ -91,7 +106,7 @@ if (isset($_GET[$developer_key])) {
         } //$count['total'] == 0
         else {
             echo "CQ found";
-            $sql_query = "UPDATE " . $sqldatabase . ".pistatus SET ipaddress='" . $ipaddress . "',position='" . $position . "',internalipaddress='" . $internalipaddress . "',hostname='" . $hostname . "',uptime='" . $uptime . "',duration=" . $duration . "," . "lastupdate = '" . time() . "',lastimage='" . $latestimage ." WHERE macaddress='" . $macaddress . "';";
+            $sql_query = "UPDATE " . $sqldatabase . ".pistatus SET ipaddress='" . $ipaddress . "',position='" . $position . "',internalipaddress='" . $internalipaddress . "',hostname='" . $hostname . "',uptime='" . $uptime . "',duration=" . $duration . "," . "lastupdate = '" . time() . "',lastimage='" . $latestimage ."',projectid='" . $projectid . "' WHERE macaddress='" . $macaddress . "';";
             echo $sql_query;
             $sql->query($sql_query);
             $errorstring = $sql->error;
